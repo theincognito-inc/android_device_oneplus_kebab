@@ -41,7 +41,7 @@ repo sync -j$(nproc --all)
 To build, execute these commands in order
 
 ```
-. build/envsetup.sh; export ALLOW_MISSING_DEPENDENCIES=true; export LC_ALL=C; lunch aosp_kebab-eng; make -j$(nproc --all) adbd recoveryimage
+. build/envsetup.sh; export ALLOW_MISSING_DEPENDENCIES=true; export LC_ALL=C; lunch twrp_kebab-eng; make -j$(nproc --all) adbd recoveryimage
 ```
 
 To test it:
@@ -54,7 +54,7 @@ fastboot boot out/target/product/kebab/recovery.img
 fastboot flash recovery recovery.img
 ```
 
-Kernel: https://github.com/AOSPA/android_kernel_oneplus_sm8250
+Kernel: https://github.com/LineageOS/android_kernel_oneplus_sm8250
 
 ##### Credits
 - bigbiff for decryption
