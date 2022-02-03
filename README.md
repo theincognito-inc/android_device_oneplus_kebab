@@ -1,7 +1,4 @@
 # Device Tree for 8T (kebab) for TWRP
-## Disclaimer - Unofficial TWRP!
-These are personal test builds of mine. In no way do I hold responsibility if it/you messes up your device.
-Proceed at your own risk.
 
 ## Setup repo tool
 Setup repo tool from here https://source.android.com/setup/develop#installing-repo
@@ -25,7 +22,7 @@ and then paste the following
 	fetch="https://github.com/" />
 
 <project path="device/oneplus/kebab"
-	name="theincognito/android_device_oneplus_kebab"
+	name="TeamWin/android_device_oneplus_kebab"
 	remote="github"
 	revision="android-11" />
 </manifest>
@@ -38,7 +35,7 @@ Sync the sources with
 repo sync -j$(nproc --all)
 ```
 
-To build, execute these commands in order
+To build, execute this command:
 
 ```
 . build/envsetup.sh; export ALLOW_MISSING_DEPENDENCIES=true; export LC_ALL=C; lunch twrp_kebab-eng; make -j$(nproc --all) adbd recoveryimage
@@ -62,3 +59,4 @@ Kernel: https://github.com/LineageOS/android_kernel_oneplus_sm8250
 - CaptainThrowback for original tree
 - mauronofrio for original tree
 - TWRP team
+- Qnorsten for OOS fix
